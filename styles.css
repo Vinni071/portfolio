@@ -134,7 +134,7 @@ html {
 .scroll-imagens {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 10px;
 }
 
 .linguagem {
