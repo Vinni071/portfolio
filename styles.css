@@ -25,7 +25,9 @@ html {
     left: 0;
     width: 100%;
     padding: 20px 100px;
-    background: transparent;
+    background: #333, rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    border-bottom: #222 1px solid;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,6 +39,11 @@ html {
     color: #fff;
     text-decoration: none;
     font-weight: 700;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: translateY(-5px);
 }
 
 .navbar a {
@@ -69,11 +76,12 @@ html {
     position: relative;
     z-index: 1;
     max-width: 100%;
+    width: 100%;;
 }
 
 .container h1 {
     position: absolute;
-    top: 50%;
+    top: 44%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
@@ -162,3 +170,38 @@ html {
 .linguagem:hover {
     transform: translateY(-5px);
 }
+
+.projetos {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.projetos h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.projetos li {
+    margin: 30px;
+    font-size: 1.2em;
+    list-style: none;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.projetos span {
+    background-color: #222;
+    opacity: 90%;
+    box-shadow: ;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.projetos li:hover {
+    transform: translateY(-5px);
+}
+
