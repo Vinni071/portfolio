@@ -6,92 +6,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vinicius Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/94de8cdde8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
 </head>
 
 <body>
 
     <header class="header">
-        <a href="index.html" class="logo">V</a>
+        <a href="#home" class="logo">V</a>
         <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="#">Projetos</a>
-            <a href="#">Sobre</a>
-            <a href="#">Contato</a>
+            <a href="#home">Home</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
         </nav>
-
     </header>
 
-    <div class="background-pattern"></div>
+    <div class="background-pattern" aria-hidden="true"></div>
 
-    <div class="container">
-        <img src="img\Imagem_do_WhatsApp_de_2024-08-18_à_s__23.28.31_fee4d529-removebg-preview.png" alt="Foto"
-            class="Eu">
-        <h1>VINICIUS RODRIGUES DA COSTA</h1>
-
-        <div class="Links">
-            <h3>Redes sociais:</h3>
-            <div class="redes-sociais">
-                <div class="social insta">
-                    <a href="https://www.instagram.com/vinicius_costa_071/">
-                        <i class="fa-brands fa-instagram"></i>
+    <main id="home" class="hero">
+        <div class="hero__image">
+            <img src="img/Imagem_do_WhatsApp_de_2024-08-18_à_s__23.28.31_fee4d529-removebg-preview.png" alt="Foto de Vinicius Rodrigues da Costa" class="Eu">
+        </div>
+        <div class="hero__content">
+            <p class="hero__greeting">Olá, eu sou</p>
+            <h1 class="hero__name">VINICIUS RODRIGUES DA COSTA</h1>
+            <p class="hero__description">Desenvolvedor focado em criar experiências digitais modernas, acessíveis e com alta performance.</p>
+            <div class="Links">
+                <h3>Redes sociais</h3>
+                <div class="redes-sociais" aria-label="Perfis de Vinicius nas redes sociais">
+                    <a class="social insta" href="https://www.instagram.com/vinicius_costa_071/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                        <span class="sr-only">Instagram</span>
                     </a>
-                </div>
-                <div class="social github">
-                    <a href="https://github.com/Vinni071">
-                        <i class="fa-brands fa-github"></i>
+                    <a class="social github" href="https://github.com/Vinni071" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        <span class="sr-only">GitHub</span>
                     </a>
-                </div>
-                <div class="social linkedin">
-                    <a href="https://www.linkedin.com/in/vinicius-rodrigues-da-costa-075543238/">
-                        <i class="fa-brands fa-linkedin"></i>
+                    <a class="social linkedin" href="https://www.linkedin.com/in/vinicius-rodrigues-da-costa-075543238/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                        <span class="sr-only">LinkedIn</span>
                     </a>
                 </div>
             </div>
         </div>
+    </main>
 
-        <div class="linguagens">
-            <h2>Linguagens de Programação</h2>
+    <section class="linguagens" aria-labelledby="linguagens-title">
+        <div class="section-header">
+            <h2 id="linguagens-title">Linguagens de Programação</h2>
             <p>Abaixo estão algumas das linguagens de programação com as quais tenho experiência.</p>
-            <div class="scroll-imagens">
-                <div class="linguagem">
-                    <i class="fa-brands fa-python"></i>
-                    <span>Python</span>
-                </div>
-                <div class="linguagem">
-                    <i class="fa-brands fa-html5"></i>
-                    <span>HTML</span>
-                </div>
-                <div class="linguagem">
-                    <i class="fa-brands fa-css"></i>
-                    <span>CSS</span>
-                </div>
-                <div class="linguagem">
-                    <i class="fa-brands fa-square-js"></i>
-                    <span>Javascript</span>
-                </div>
-                <div class="linguagem">
-                    <i class="fa-solid fa-c"></i>
-                    <span>C++</span>
-                </div>
+        </div>
+        <div class="linguagens__grid">
+            <div class="linguagem">
+                <i class="fa-brands fa-python" aria-hidden="true"></i>
+                <span>Python</span>
+            </div>
+            <div class="linguagem">
+                <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                <span>HTML</span>
+            </div>
+            <div class="linguagem">
+                <i class="fa-brands fa-css3" aria-hidden="true"></i>
+                <span>CSS</span>
+            </div>
+            <div class="linguagem">
+                <i class="fa-brands fa-square-js" aria-hidden="true"></i>
+                <span>JavaScript</span>
+            </div>
+            <div class="linguagem">
+                <i class="fa-solid fa-c" aria-hidden="true"></i>
+                <span>C++</span>
             </div>
         </div>
-        <section class="projetos">
-        <div class="Projetos"><h2><p>PROJETOS</p></h2>
-           <li> <img src="" alt="">
-            <span>URL SNIFFER</span></li>
-            <li><img src="" alt="">
-            <span>ALMOXARIFADO</span></li>
-            <li><img src="" alt="">
-            <span>JOGO DA FORCA EM PYTHON</span></li>
-            <li><img src="" alt="">
-            <span>MYFINANCE</span></li>
-        </div>
-        </section>
+    </section>
 
-    </div>
+    <section id="projetos" class="projetos" aria-labelledby="projetos-title">
+        <div class="section-header">
+            <h2 id="projetos-title">Projetos em Destaque</h2>
+            <p>Alguns dos trabalhos mais recentes que mostram minha experiência em desenvolvimento web e automações.</p>
+        </div>
+        <div class="projetos__grid">
+            <article class="projeto-card">
+                <h3>URL Sniffer</h3>
+                <p>Ferramenta em Python que monitora e registra URLs acessadas em uma rede para auxiliar em auditorias de segurança.</p>
+                <div class="projeto-card__tags">
+                    <span>Python</span>
+                    <span>Networking</span>
+                </div>
+                <a href="https://github.com/Vinni071/url-sniffer" class="projeto-card__link" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+            </article>
+            <article class="projeto-card">
+                <h3>Almoxarifado</h3>
+                <p>Sistema web para controle de estoque com cadastro de produtos, alertas de reposição e relatórios dinâmicos.</p>
+                <div class="projeto-card__tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+                <a href="https://github.com/Vinni071/almoxarifado" class="projeto-card__link" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+            </article>
+            <article class="projeto-card">
+                <h3>Jogo da Forca</h3>
+                <p>Implementação do clássico jogo da forca em Python com interface no terminal e seleção dinâmica de palavras.</p>
+                <div class="projeto-card__tags">
+                    <span>Python</span>
+                    <span>Jogo</span>
+                </div>
+                <a href="https://github.com/Vinni071/jogo-da-forca" class="projeto-card__link" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+            </article>
+            <article class="projeto-card">
+                <h3>MyFinance</h3>
+                <p>Dashboard financeiro que organiza receitas e despesas, com gráficos e metas personalizadas para planejamento mensal.</p>
+                <div class="projeto-card__tags">
+                    <span>JavaScript</span>
+                    <span>APIs</span>
+                </div>
+                <a href="https://github.com/Vinni071/myfinance" class="projeto-card__link" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+            </article>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre" aria-labelledby="sobre-title">
+        <div class="section-header">
+            <h2 id="sobre-title">Sobre mim</h2>
+            <p>Entusiasta por tecnologia, sou movido pelo desafio de transformar ideias em produtos digitais com qualidade e propósito.</p>
+        </div>
+        <div class="sobre__content">
+            <p>Acredito que um bom projeto começa com uma comunicação clara e termina com uma experiência que encanta o usuário. Tenho atuado em iniciativas acadêmicas e pessoais, entregando soluções que combinam código limpo, interfaces modernas e foco em resultados.</p>
+            <p>Quando não estou codando, estou estudando novas ferramentas e metodologias para evoluir minhas habilidades e entregar projetos cada vez mais completos.</p>
+        </div>
+    </section>
+
+    <section id="contato" class="contato" aria-labelledby="contato-title">
+        <div class="section-header">
+            <h2 id="contato-title">Vamos conversar</h2>
+            <p>Estou disponível para novos desafios, colaborações e oportunidades.</p>
+        </div>
+        <div class="contato__cta">
+            <a class="contato__button" href="mailto:vinicius@example.com">Entrar em contato</a>
+        </div>
+    </section>
+
 </body>
 
 </html>
