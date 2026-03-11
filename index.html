@@ -4,193 +4,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinicius Portfolio</title>
+    <title>Vinicius | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/94de8cdde8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 
 <body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Animated Background Context -->
+    <div class="bg-canvas">
+        <div class="bg-orb orb-1"></div>
+        <div class="bg-orb orb-2"></div>
+        <div class="bg-orb orb-3"></div>
+    </div>
+    <div class="noise-overlay"></div>
 
     <header class="header">
-        <a href="#home" class="logo">V</a>
-        <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#contato">Contato</a>
-        </nav>
+        <div class="container nav-container">
+            <a href="#home" class="logo">Vinicius<span>.dev</span></a>
+
+            <div class="nav-wrapper">
+                <nav class="navbar">
+                    <ul class="nav-links">
+                        <li><a href="#home" class="nav-item active">Home</a></li>
+                        <li><a href="#projetos" class="nav-item">Projetos</a></li>
+                        <li><a href="#sobre" class="nav-item">Sobre</a></li>
+                        <li><a href="#contato" class="btn btn-outline btn-contact">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <button class="hamburger" aria-label="Abrir menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
     </header>
 
-    <div class="background-pattern" aria-hidden="true"></div>
+    <main id="home" class="hero section-padding">
+        <div class="container hero__container">
+            <div class="hero__content reveal reveal-left">
+                <span class="badge">
+                    <i class="fa-solid fa-code"></i> Desenvolvedor Full Stack
+                </span>
+                <h1 class="hero__name">Transformando código em <br><span class="gradient-text">Experiências
+                        Digitais.</span></h1>
+                <p class="hero__description">
+                    Sou <strong>Vinicius Rodrigues</strong>. Especialista em criar soluções modernas,
+                    automações eficientes e interfaces de alta performance.
+                </p>
 
-    <main id="home" class="hero">
-        <div class="hero__image">
-            <img src="img/Imagem_do_WhatsApp_de_2024-08-18_à_s__23.28.31_fee4d529-removebg-preview.png"
-                alt="Foto de Vinicius Rodrigues da Costa" class="Eu">
-        </div>
-        <div class="hero__content">
-            <p class="hero__greeting">Olá, eu sou</p>
-            <h1 class="hero__name">VINICIUS RODRIGUES DA COSTA</h1>
-            <p class="hero__description">Desenvolvedor focado em criar experiências digitais modernas, acessíveis e com
-                alta performance.</p>
-            <div class="Links">
-                <h3>Redes sociais</h3>
-                <div class="redes-sociais" aria-label="Perfis de Vinicius nas redes sociais">
-                    <a class="social insta" href="https://www.instagram.com/vinicius_costa_071/" target="_blank"
-                        rel="noopener noreferrer">
-                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                        <span class="sr-only">Instagram</span>
+                <div class="hero__actions">
+                    <a href="#projetos" class="btn btn-primary">
+                        Ver Projetos <i class="fa-solid fa-arrow-right"></i>
                     </a>
-                    <a class="social github" href="https://github.com/Vinni071" target="_blank"
-                        rel="noopener noreferrer">
-                        <i class="fa-brands fa-github" aria-hidden="true"></i>
-                        <span class="sr-only">GitHub</span>
-                    </a>
-                    <a class="social linkedin" href="https://www.linkedin.com/in/vinicius-rodrigues-da-costa-075543238/"
-                        target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                        <span class="sr-only">LinkedIn</span>
-                    </a>
+                    <!-- <a href="" class="btn btn-primary">
+                        Download CV <i class="fa-solid fa-download"></i>
+                    </a> -->
+                    <div class="social-links">
+                        <a href="https://github.com/Vinni071" target="_blank" aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/vinicius-rodrigues-da-costa-075543238/" target="_blank"
+                            aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/vinicius_costa_071/" target="_blank" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero__image-wrapper reveal reveal-right delay-200">
+                <div class="hero__image-inner" id="heroImageInner">
+                    <img src="img/Imagem_do_WhatsApp_de_2024-08-18_à_s__23.28.31_fee4d529-removebg-preview.png"
+                        alt="Foto de Vinicius Rodrigues" class="profile-pic">
+                    <div class="floating-icon icon-python"><i class="fa-brands fa-python"></i></div>
+                    <div class="floating-icon icon-js"><i class="fa-brands fa-js"></i></div>
+                    <div class="floating-icon icon-react"><i class="fa-brands fa-react"></i></div>
                 </div>
             </div>
         </div>
+
+        <a href="#linguagens" class="scroll-indicator">
+            <span class="mouse">
+                <span class="wheel"></span>
+            </span>
+            <span>Scroll</span>
+        </a>
     </main>
 
-    <section class="linguagens" aria-labelledby="linguagens-title">
-        <div class="section-header">
-            <h2 id="linguagens-title">Linguagens de Programação</h2>
-            <p>Abaixo estão algumas das linguagens de programação com as quais tenho experiência.</p>
-        </div>
-        <div class="linguagens__grid">
-            <div class="linguagem">
-                <i class="fa-brands fa-python" aria-hidden="true"></i>
-                <span>Python</span>
+    <section id="linguagens" class="skills section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Tech Stack</h2>
+                <p class="section-subtitle">Ferramentas e tecnologias que domino e utilizo para construir soluções
+                    escaláveis.</p>
             </div>
-            <div class="linguagem">
-                <i class="fa-brands fa-html5" aria-hidden="true"></i>
-                <span>HTML</span>
-            </div>
-            <div class="linguagem">
-                <i class="fa-brands fa-css3" aria-hidden="true"></i>
-                <span>CSS</span>
-            </div>
-            <div class="linguagem">
-                <i class="fa-brands fa-square-js" aria-hidden="true"></i>
-                <span>JavaScript</span>
-            </div>
-            <div class="linguagem">
-                <i class="fa-solid fa-c" aria-hidden="true"></i>
-                <span>C++</span>
-            </div>
-            <div class="linguagem">
-                <i class="fa-brands fa-php" aria-hidden="true"></i>
-                <span>PHP</span>
-            </div>
-            <div class="linguagem">
-                <i class="fa-brands fa-totvs" aria-hidden="true">
-                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                        id="Totvs--Streamline-Simple-Icons" height="45" width="45">
-                        <desc>
-                            Totvs Streamline Icon: https://streamlinehq.com
-                        </desc>
-                        <title>TOTVS</title>
-                        <path
-                            d="M12 0C5.385 0 0 5.339 0 12c0 6.614 5.385 12 12 12 6.614 0 12 -5.386 12 -12S18.614 0 12 0ZM8.648 3.813c1.275 -0.068 10.697 2.302 11.43 2.943 0.614 0.85 0.614 9.118 0 9.685 -0.284 0.095 -2.127 -0.283 -4.205 -0.755 0 2.031 -0.143 3.966 -0.426 4.203 -0.756 0.236 -10.772 -2.267 -11.527 -2.928 -0.615 -0.85 -0.615 -9.119 0 -9.686 0.283 -0.094 2.079 0.284 4.205 0.756 0 -2.031 0.142 -3.969 0.425 -4.205a0.448 0.448 0 0 1 0.098 -0.013Zm-0.523 4.265c-0.048 2.362 0.095 4.961 0.425 5.434 0.426 0.378 4.158 1.418 7.276 2.174 0.047 -2.41 -0.095 -5.008 -0.426 -5.481 -0.425 -0.378 -4.157 -1.418 -7.275 -2.127Z"
-                            fill="#6c63ff" stroke-width="1"></path>
-                    </svg>
-                </i>
-                <span>Advpl</span>
-            </div>
-            <!-- <div class="linguagem">
-                <i class="fa-solid fa-database"></i>
-                <span>MSSQLS</span>
-            </div> -->
-        </div>
-    </section>
 
-    <section id="projetos" class="projetos" aria-labelledby="projetos-title">
-        <div class="section-header">
-            <h2 id="projetos-title">Projetos em Destaque</h2>
-            <p>Alguns dos trabalhos mais recentes que mostram minha experiência em desenvolvimento web e automações.</p>
-        </div>
-        <div class="projetos__grid">
-            <article class="projeto-card">
-                <h3>URL Sniffer</h3>
-                <p>Ferramenta em Python que monitora e registra URLs acessadas em uma rede para auxiliar em auditorias
-                    de segurança.</p>
-                <div class="projeto-card__tags">
+            <div class="skills__grid">
+                <div class="skill-card reveal delay-100">
+                    <i class="devicon-python-plain colored"></i>
                     <span>Python</span>
-                    <span>Networking</span>
                 </div>
-                <a href="https://github.com/Vinni071/url-sniffer" class="projeto-card__link" target="_blank"
-                    rel="noopener noreferrer">Ver no GitHub</a>
-            </article>
-            <article class="projeto-card">
-                <h3>Spritefy</h3>
-                <p>Sistema web de reprodução de música com interface moderna e funcionalidades de playlist e controle de
-                    volume com foco em músicas 8-bit.</p>
-                <div class="projeto-card__tags">
-                    <span>HTML</span>
-                    <span>CSS</span>
+                <div class="skill-card reveal delay-200">
+                    <i class="devicon-javascript-plain colored"></i>
                     <span>JavaScript</span>
                 </div>
-                <a href="https://github.com/Vinni071/almoxarifado" class="projeto-card__link" target="_blank"
-                    rel="noopener noreferrer">Ver no GitHub</a>
-            </article>
-            <article class="projeto-card">
-                <h3>Jogo da Forca</h3>
-                <p>Implementação do clássico jogo da forca em Python com interface gráfica simples e seleção dinâmica de
-                    palavras.</p>
-                <div class="projeto-card__tags">
-                    <span>Python</span>
-                    <span>Jogo</span>
+                <div class="skill-card reveal delay-300">
+                    <i class="devicon-html5-plain colored"></i>
+                    <span>HTML5</span>
                 </div>
-                <a href="https://github.com/Vinni071/jogo-da-forca-python" class="projeto-card__link" target="_blank"
-                    rel="noopener noreferrer">Ver no GitHub</a>
-            </article>
-            <article class="projeto-card">
-                <h3>MyFinance</h3>
-                <p>Dashboard financeiro que organiza receitas e despesas, com gráficos e metas personalizadas para
-                    planejamento mensal.</p>
-                <div class="projeto-card__tags">
-                    <span>Typescript</span>
+                <div class="skill-card reveal delay-400">
+                    <i class="devicon-css3-plain colored"></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="skill-card reveal delay-100">
+                    <i class="devicon-react-original colored"></i>
                     <span>React</span>
                 </div>
-                <a href="https://github.com/Vinni071/myfinance" class="projeto-card__link" target="_blank"
-                    rel="noopener noreferrer">Ver no GitHub</a>
-            </article>
+                <div class="skill-card reveal delay-200">
+                    <i class="devicon-cplusplus-plain colored"></i>
+                    <span>C++</span>
+                </div>
+                <div class="skill-card reveal delay-300">
+                    <i class="devicon-php-plain colored"></i>
+                    <span>PHP</span>
+                </div>
+                <div class="skill-card reveal delay-400">
+                    <i class="devicon-microsoftsqlserver-plain colored"></i>
+                    <span>SQL Server</span>
+                </div>
+                <div class="skill-card reveal delay-100 custom-icon">
+                    <svg viewBox="0 0 24 24" fill="#6c63ff" width="56" height="56">
+                        <path
+                            d="M12 0C5.385 0 0 5.339 0 12c0 6.614 5.385 12 12 12 6.614 0 12 -5.386 12 -12S18.614 0 12 0ZM8.648 3.813c1.275 -0.068 10.697 2.302 11.43 2.943 0.614 0.85 0.614 9.118 0 9.685 -0.284 0.095 -2.127 -0.283 -4.205 -0.755 0 2.031 -0.143 3.966 -0.426 4.203 -0.756 0.236 -10.772 -2.267 -11.527 -2.928 -0.615 -0.85 -0.615 -9.119 0 -9.686 0.283 -0.094 2.079 0.284 4.205 0.756 0 -2.031 0.142 -3.969 0.425 -4.205a0.448 0.448 0 0 1 0.098 -0.013Zm-0.523 4.265c-0.048 2.362 0.095 4.961 0.425 5.434 0.426 0.378 4.158 1.418 7.276 2.174 0.047 -2.41 -0.095 -5.008 -0.426 -5.481 -0.425 -0.378 -4.157 -1.418 -7.275 -2.127Z">
+                        </path>
+                    </svg>
+                    <span>Advpl</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="sobre" class="sobre" aria-labelledby="sobre-title">
-        <div class="section-header">
-            <h2 id="sobre-title">Sobre mim</h2>
-            <p>Entusiasta por tecnologia, sou movido pelo desafio de transformar ideias em produtos digitais com
-                qualidade e propósito.</p>
-        </div>
-        <div class="sobre__content">
-            <p>Acredito que um bom projeto começa com uma comunicação clara e termina com uma experiência que encanta o
-                usuário. Tenho atuado em iniciativas acadêmicas e pessoais, entregando soluções que combinam código
-                limpo, interfaces modernas e foco em resultados.</p>
-            <p>Quando não estou codando, estou estudando novas ferramentas e metodologias para evoluir minhas
-                habilidades e entregar projetos cada vez mais completos.</p>
+    <section id="projetos" class="projects section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Projetos Selecionados</h2>
+                <p class="section-subtitle">Alguns dos meus trabalhos recentes e de destaque. Explorando arquitetura,
+                    lógica e design.</p>
+            </div>
+
+            <div class="projects__grid">
+                <!-- Project 1 -->
+                <article class="project-card reveal">
+                    <div class="card-icon"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3>URL Sniffer</h3>
+                    <p>Ferramenta em Python para monitoramento e registro de URLs em rede para auditoria de segurança e
+                        análise de pacotes.</p>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Security</span>
+                        <span>Networking</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://github.com/Vinni071/url-sniffer" target="_blank" class="link-arrow">
+                            Visualizar no GitHub <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card reveal delay-100">
+                    <div class="card-icon"><i class="fa-solid fa-music"></i></div>
+                    <h3>Spritefy</h3>
+                    <p>Mergulhe na nostalgia. Player de música web 8-bit com playlists dinâmicas e um visual retro
+                        moderno de alta performance.</p>
+                    <div class="tags">
+                        <span>HTML/CSS</span>
+                        <span>JavaScript Vanilla</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://github.com/Vinni071/almoxarifado" target="_blank" class="link-arrow">
+                            Visualizar no GitHub <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card reveal delay-200">
+                    <div class="card-icon"><i class="fa-solid fa-gamepad"></i></div>
+                    <h3>Jogo da Forca</h3>
+                    <p>Jogo de batalha naval desenvolvido em Python com interface gráfica. Com oponente IA.</p>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Game Logic</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://github.com/Vinni071/batalha_naval_python" target="_blank" class="link-arrow">
+                            Visualizar no GitHub <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card reveal delay-300">
+                    <div class="card-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                    <h3>MyFinance Dashboard</h3>
+                    <p>Plataforma financeira completa para controle de gastos, visualização de gráficos dinâmicos e
+                        estabelecimento de metas com React e TypeScript.</p>
+                    <div class="tags">
+                        <span>React</span>
+                        <span>TypeScript</span>
+                        <span>Data Viz</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://myfinance-web-app.vercel.app/" target="_blank" class="link-arrow">
+                            Visitar Site <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
         </div>
     </section>
 
-    <section id="contato" class="contato" aria-labelledby="contato-title">
-        <div class="section-header">
-            <h2 id="contato-title">Vamos conversar</h2>
-            <p>Estou disponível para novos desafios, colaborações e oportunidades.</p>
-        </div>
-        <div class="contato__cta">
-            <a class="contato__button" href="mailto:viniciusr.costa078@gmail.com">Entrar em contato</a>
+    <section id="sobre" class="about section-padding">
+        <div class="container">
+            <div class="about__wrapper reveal">
+                <div class="about__text">
+                    <h2 class="section-title">Sobre Mim</h2>
+                    <p>
+                        Acredito que a tecnologia é a melhor ferramenta para resolver problemas complexos.
+                        Com um background diversificado, transito entre o desenvolvimento de <strong>sistemas backend
+                            robustos</strong>
+                        e a criação de <strong>interfaces frontend interativas</strong>.
+                    </p>
+                    <p>
+                        Quando não estou programando, estou pesquisando sobre novas arquiteturas de software,
+                        aprimorando minhas habilidades em UI/UX ou
+                        explorando o mundo dos jogos indie em busca de inspiração e boas histórias.
+                    </p>
+                </div>
+                <div class="about__stats">
+                    <div class="stat-item reveal delay-100">
+                        <span class="number" data-target="4">0</span>
+                        <span class="label">Anos de Estudo</span>
+                    </div>
+                    <div class="stat-item reveal delay-200">
+                        <span class="number" data-target="15">0</span>
+                        <span class="label">Projetos Práticos</span>
+                    </div>
+                    <div class="stat-item reveal delay-300">
+                        <span class="number" data-target="8">0</span>
+                        <span class="label">Linguagens</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <section id="contato" class="contact section-padding">
+        <div class="container reveal">
+            <div class="contact-card">
+                <h2 class="section-title">Vamos trabalhar juntos?</h2>
+                <p>Estou sempre aberto a discutir novos projetos criativos, ideias inovadoras ou oportunidades de
+                    parceria e desenvolvimento de sistemas.</p>
+                <a href="mailto:viniciusr.costa078@gmail.com" class="btn btn-primary btn-large">
+                    <i class="fa-regular fa-envelope"></i> Iniciar Conversa
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p> 2026, Vinicius Rodrigues.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
