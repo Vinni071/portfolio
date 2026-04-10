@@ -246,7 +246,7 @@ body.hovering .cursor-outline {
     border-color: transparent;
 }
 
-/* === Animated Background Context === */
+/* === Video Background Context === */
 .bg-canvas {
     position: fixed;
     top: 0;
@@ -255,61 +255,19 @@ body.hovering .cursor-outline {
     height: 100vh;
     z-index: -1;
     overflow: hidden;
-    background: radial-gradient(circle at center, #111116 0%, #07070a 100%);
+    background: #000;
 }
 
-.bg-orb {
+.video-bg {
     position: absolute;
-    border-radius: 50%;
-    filter: blur(100px);
-    opacity: 0.4;
-    animation: drift 20s infinite alternate ease-in-out;
-}
-
-.orb-1 {
-    width: 500px;
-    height: 500px;
-    background: var(--primary);
-    top: -10%;
-    left: -10%;
-}
-
-.orb-2 {
-    width: 400px;
-    height: 400px;
-    background: var(--secondary);
-    bottom: -10%;
-    right: -5%;
-    animation-delay: -5s;
-}
-
-.orb-3 {
-    width: 300px;
-    height: 300px;
-    background: #4b0082;
-    /* Deep Indigo */
-    top: 40%;
-    left: 40%;
-    opacity: 0.3;
-    animation-delay: -10s;
-}
-
-@keyframes drift {
-    0% {
-        transform: translate(0, 0) scale(1);
-    }
-
-    33% {
-        transform: translate(30px, -50px) scale(1.1);
-    }
-
-    66% {
-        transform: translate(-20px, 20px) scale(0.9);
-    }
-
-    100% {
-        transform: translate(50px, 40px) scale(1.05);
-    }
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    opacity: 0.35; /* escurece o video para garantir legibilidade dos textos */
+    pointer-events: none;
 }
 
 .noise-overlay {
@@ -666,10 +624,10 @@ body.hovering .cursor-outline {
     height: auto;
     aspect-ratio: 1;
     object-fit: cover;
+    object-position: top center;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     border: 2px solid var(--border-hover);
     box-shadow: 0 0 50px rgba(138, 43, 226, 0.15);
-    background: linear-gradient(var(--bg-dark), var(--bg-dark)) padding-box, var(--gradient-primary) border-box;
     animation: morph 8s ease-in-out infinite;
     position: relative;
     z-index: 2;
