@@ -1353,6 +1353,44 @@ body.hovering .cursor-outline {
     line-height: 1.8;
 }
 
+.certification-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.certification-badge-image {
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+    object-fit: contain;
+    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.35));
+}
+
+.certification-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.certification-details .card-footer {
+    margin-top: 1rem;
+}
+
+.experience-content:hover .link-arrow {
+    color: var(--primary);
+}
+
+.experience-content:hover .link-arrow::after {
+    background: var(--primary);
+    width: 100%;
+}
+
+.experience-content:hover .link-arrow i {
+    transform: translateX(6px);
+}
+
 @media (max-width: 768px) {
     .experience-list::before {
         left: 15px;
@@ -1368,5 +1406,21 @@ body.hovering .cursor-outline {
 
     .experience-content {
         padding: 1.8rem;
+    }
+
+    .certification-content {
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .certification-badge-image {
+        width: 88px;
+        height: 88px;
+    }
+}
+
+@media (max-width: 560px) {
+    .certification-content {
+        flex-direction: column;
     }
 }
