@@ -56,23 +56,42 @@ document.addEventListener('DOMContentLoaded', () => {
     /* === Mobile Menu Logic === */
     const hamburger = document.querySelector('.hamburger');
     const navWrapper = document.querySelector('.nav-wrapper');
-    const navLinksList = document.querySelectorAll('.nav-item');
+    const navLinksList = document.querySelectorAll('.nav-links a, .logo');
 
     if (hamburger && navWrapper) {
+        const mobileMenu = window.matchMedia('(max-width: 768px)');
+        const setMenuOpen = (isOpen) => {
+            hamburger.classList.toggle('active', isOpen);
+            navWrapper.classList.toggle('active', isOpen);
+            hamburger.setAttribute('aria-expanded', String(isOpen));
+            hamburger.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+            navWrapper.inert = mobileMenu.matches && !isOpen;
+            document.documentElement.classList.toggle('menu-open', isOpen);
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+            if (isOpen) navWrapper.scrollTop = 0;
+        };
+
+        setMenuOpen(false);
+
         hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navWrapper.classList.toggle('active');
-            document.body.style.overflow = navWrapper.classList.contains('active') ? 'hidden' : '';
+            setMenuOpen(hamburger.getAttribute('aria-expanded') !== 'true');
         });
 
         // Close menu when clicking a link
         navLinksList.forEach(link => {
             link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navWrapper.classList.remove('active');
-                document.body.style.overflow = '';
+                setMenuOpen(false);
             });
         });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && hamburger.classList.contains('active')) {
+                setMenuOpen(false);
+                hamburger.focus();
+            }
+        });
+
+        mobileMenu.addEventListener('change', () => setMenuOpen(false));
     }
 
     /* === Active Link Highlighting using IntersectionObserver === */
